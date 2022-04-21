@@ -14,9 +14,9 @@
 sed -i 's/192.168.1.1/192.168.120.1/g' package/base-files/files/bin/config_generate
 
 # Add luci-app-ssr-plus
-pushd package/lean
-git clone --depth=1 https://github.com/fw876/helloworld
-popd
+#pushd package/lean
+#git clone --depth=1 https://github.com/fw876/helloworld
+#popd
 
 # Clone community packages to package/community
 mkdir package/community
@@ -35,14 +35,14 @@ cp -r ../luci/applications/luci-app-adguardhome ../package/lean//luci-app-adguar
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add luci-app-vssr <M>
-git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
+#git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git
+#git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 
 # Add luci-proto-minieap
 git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add ServerChan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan
+#git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 # Add OpenClash
 #git clone --depth=1 -b master https://github.com/vernesong/OpenClash
@@ -69,12 +69,12 @@ rm -rf ../lean/luci-theme-argon
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add luci-udptools
-svn co https://github.com/zcy85611/Openwrt-Package/trunk/luci-udptools
-svn co https://github.com/zcy85611/Openwrt-Package/trunk/udp2raw
-svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder-tunnel
+#svn co https://github.com/zcy85611/Openwrt-Package/trunk/luci-udptools
+#svn co https://github.com/zcy85611/Openwrt-Package/trunk/udp2raw
+#svn co https://github.com/zcy85611/Openwrt-Package/trunk/udpspeeder-tunnel
 
 # Add OpenAppFilter
-git clone --depth 1 -b oaf-3.0.1 https://github.com/destan19/OpenAppFilter.git
+#git clone --depth 1 -b oaf-3.0.1 https://github.com/destan19/OpenAppFilter.git
 
 # Add luci-app-oled (R2S Only)
 git clone --depth=1 https://github.com/NateLol/luci-app-oled
@@ -110,9 +110,9 @@ svn co https://github.com/openwrt/packages/trunk/utils/syncthing
 popd
 
 # Fix mt76 wireless driver
-pushd package/kernel/mt76
-sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\/modules.d\/mt76-usb' Makefile
-popd
+#pushd package/kernel/mt76
+#sed -i '/mt7662u_rom_patch.bin/a\\techo mt76-usb disable_usb_sg=1 > $\(1\)\/etc\/modules.d\/mt76-usb' Makefile
+#popd
 
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
