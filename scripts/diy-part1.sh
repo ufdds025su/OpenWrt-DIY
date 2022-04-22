@@ -25,3 +25,11 @@ rm -rf ../lean/luci-theme-argon
 # Svn checkout packages from immortalwrt's repository
 git clone --depth=1 https://github.com/immortalwrt/packages -b openwrt-18.06 packages
 git clone --depth=1 https://github.com/immortalwrt/luci -b openwrt-18.06 luci
+
+#git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+#git clone https://github.com/kenzok8/small.git package/small
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+git clone https://github.com/kiddin9/openwrt-packages.git package/kiddin9
+git clone https://github.com/NueXini/NueXini_Packages.git package/NueXini
+rm -f /workdir/openwrt/build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/root-ipq40xx/sbin/mount.ntfs
