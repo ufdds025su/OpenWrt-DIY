@@ -23,5 +23,5 @@ rm -rf package/lean/luci-theme-argon/
 git clone -b master https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 #添加额外软件包
-git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
+#git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 # git clone -b master https://github.com/vernesong/OpenClash.git package/OpenClash
