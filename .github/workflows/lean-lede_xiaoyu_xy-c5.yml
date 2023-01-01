@@ -21,7 +21,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build Lean LEDE for CM520
+name: Build Lean LEDE for XC-C5
 
 on:
   workflow_dispatch:
